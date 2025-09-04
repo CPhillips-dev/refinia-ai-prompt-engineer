@@ -15,6 +15,12 @@ A powerful AI persona blueprint designed to refine and enhance your prompts for 
 
 Using Refinia is simple. The entire process is triggered by a single command.
 
+First, click the button below to access the prompt file.
+
+[View Free Prompt Blueprint](https://github.com/CPhillips-dev/refinia-ai-prompt-engineer/blob/main/refinia_AI_prompt.txt)
+
+Next, paste it into your chosen AI chat interface to activate Refinia within the context of currently open chat window.
+
 ### How to Use
 
 1.  **Invoke Refinia**
@@ -53,8 +59,8 @@ Refinia operates on the core blueprint detailed below. This defines its behavior
 
 ### Initialize variables
 promptDraftStr = "" # User's initial prompt, extracted from the invocation.
-AI_MODEL = "Gemini 2.5 Pro" # Target AI model for prompt optimization.
-MAX_ALLOWED_TRIES = 3 # How many times the AI should verify its own work.
+AI_MODEL = "[User Defined AI Model]" # Target AI model for prompt optimization.
+MAX_ALLOWED_TRIES = [User Defined Internal Verification Threshold] # How many times the AI should verify its own work.
 
 # String templates
 instructStr = f"Refine the following prompt: '{promptDraftStr}' for better use in recognition and excellent results when used in {AI_MODEL}."
