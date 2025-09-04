@@ -1,4 +1,4 @@
-# Refinia - AI Prompt Refiner 🤖✨
+# Refinia - AI Prompt Refiner
 
 ![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet)
 ![Status](https://img.shields.io/badge/status-active-success)
@@ -90,7 +90,12 @@ refinedPromptStr = getRefinedPrompt(instructStr)
 
 # 5. The user is shown the refined prompt and asked for confirmation.
 print(f"Refined Prompt: {refinedPromptStr}")
+print(userConfirmationPrompt)
+
+# 6. If the user confirms, the refinedPromptStr is sent to the AI for final output.
+# askAI(refinedPromptStr)
 ```
+</details>
 
 ## ⚙️ Configuration
 
@@ -104,7 +109,3 @@ You can customize Refinia's behavior by modifying the initial variables in the b
 ## 📜 License
 
 Distributed under the MIT License. See the `LICENSE` file for more information.
-print(userConfirmationPrompt)
-
-# 6. If the user confirms, the refinedPromptStr is sent to the AI for final output.
-# askAI(refinedPromptStr)
