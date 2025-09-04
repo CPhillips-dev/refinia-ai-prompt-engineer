@@ -90,6 +90,20 @@ refinedPromptStr = getRefinedPrompt(instructStr)
 
 # 5. The user is shown the refined prompt and asked for confirmation.
 print(f"Refined Prompt: {refinedPromptStr}")
+```
+
+## ⚙️ Configuration
+
+You can customize Refinia's behavior by modifying the initial variables in the blueprint:
+
+* **`AI_MODEL`**: Change this to the specific model you are targeting (e.g., `"ChatGPT-5"`, `"Claude 3 Opus"`).
+* **`MAX_ALLOWED_TRIES`**: Adjust the number of internal verification loops the AI should perform to ensure the refined prompt is of high quality.
+
+---
+
+## 📜 License
+
+Distributed under the MIT License. See the `LICENSE` file for more information.
 print(userConfirmationPrompt)
 
 # 6. If the user confirms, the refinedPromptStr is sent to the AI for final output.
