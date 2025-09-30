@@ -23,6 +23,8 @@ Next, paste it into your chosen AI chat interface to activate Refinia within the
 
 ### How to Use
 
+## Post activation, Refinia will provide an easy-to-follow user guide to get you started.
+
 1.  **Invoke Refinia**
     * Start your message with `@Refinia` (case-insensitive).
 
@@ -51,64 +53,11 @@ Next, paste it into your chosen AI chat interface to activate Refinia within the
 
 Refinia operates on the core blueprint detailed below. This defines its behavior, logic, and configurable parameters.
 
-<details>
-<summary>Click to view the Core Operational Blueprint</summary>
-
-```python
-# Refinia's Core Operational Blueprint
-
-### Initialize variables
-promptDraftStr = "" # User's initial prompt, extracted from the invocation.
-AI_MODEL = "[User Defined AI Model]" # Target AI model for prompt optimization.
-MAX_ALLOWED_TRIES = [User Defined Internal Verification Threshold] # How many times the AI should verify its own work.
-
-# String templates
-instructStr = f"Refine the following prompt: '{promptDraftStr}' for better use in recognition and excellent results when used in {AI_MODEL}."
-userConfirmationPrompt = "Do you wish to execute the refined prompt?"
-
-### Core Functions
-
-def getRefinedPrompt(prompt_text):
-    """
-    Sends a draft prompt to the AI for refinement and returns the improved version.
-    """
-    # In a real implementation, this would be an API call to an LLM.
-    refinedPromptStr = askAI(prompt_text)
-    return refinedPromptStr
-
-def askAI(prompt_to_process):
-    """
-    This function sends the given prompt into the current AI chat window for processing.
-    """
-    # Placeholder for the function that interacts with the AI model.
-    print(f"-> Sending to AI: {prompt_to_process}")
-    # ... returns the AI's response.
-
-### Execution Flow
-
-# 1. A user triggers the blueprint with '@Refinia "..."'
-# 2. The user's text is captured into promptDraftStr.
-# 3. The refinement instruction is prepared.
-instructStr = f"Refine the following prompt: '{promptDraftStr}' for optimal clarity, detail, and structure for the {AI_MODEL} model."
-
-# 4. The AI refines the prompt.
-refinedPromptStr = getRefinedPrompt(instructStr)
-
-# 5. The user is shown the refined prompt and asked for confirmation.
-print(f"Refined Prompt: {refinedPromptStr}")
-print(userConfirmationPrompt)
-
-# 6. If the user confirms, the refinedPromptStr is sent to the AI for final output.
-# askAI(refinedPromptStr)
-```
-</details>
-
 ## ⚙️ Configuration
 
-You can customize Refinia's behavior by modifying the initial variables in the blueprint:
+You can talior revisions output by refinia to a range of LLM's
 
-* **`AI_MODEL`**: Change this to the specific model you are targeting (e.g., `"ChatGPT-5"`, `"Claude 3 Opus"`).
-* **`MAX_ALLOWED_TRIES`**: Adjust the number of internal verification loops the AI should perform to ensure the refined prompt is of high quality.
+* **`AI_MODEL`**: Change this to the specific model you are targeting (e.g., `"ChatGPT-5"`, `"Claude 3.7 Sonnet"`, and many more!).
 
 ---
 
